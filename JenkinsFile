@@ -8,9 +8,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sshagent(['19981112']) {
-                    sh 'scp -r src/ ec2-user@63.35.203.217:/var/www/html/'
-                }
+                sh 'scp -i /c/Users/saisr/BuildConnect/BuildConnect.pem -r src/ ec2-user@63.35.203.217:/var/www/html/'
             }
         }
     }
