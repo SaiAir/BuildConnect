@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                bat 'pscp -batch -hostkey "ssh-ed25519 255 ca:05:5b:97:b6:a0:43:be:ed:fe:84:aa:f3:b6:c9:a9" -i /c/Users/saisr/BuildConnect/BuildConnect.ppk -r src\\* ec2-user@63.35.203.217:/var/www/html/'
+                bat 'pscp -batch -hostkey "ssh-ed25519 255 ca:05:5b:97:b6:a0:43:be:ed:fe:84:aa:f3:b6:c9:a9" -i "C:\\Users\\saisr\\BuildConnect\\BuildConnect.ppk" -r src\\* ec2-user@63.35.203.217:/var/www/html/'
             }
         }
     }
