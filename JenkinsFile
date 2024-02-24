@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sshagent(['65b44e4c-bd47-43ba-b73d-5ee8fbe632d0']) {
+                sshagent(['40d99c4c-5c3b-40d6-a53a-bf63f5055ea4']) {
                     sh 'scp -r src/ ec2-user@63.35.203.217:/var/www/html/'
                 }
             }
