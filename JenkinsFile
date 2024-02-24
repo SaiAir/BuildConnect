@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'scp -i /c/Users/saisr/BuildConnect/BuildConnect.pem -r src/ ec2-user@63.35.203.217:/var/www/html/'
+                bat 'pscp -i "/c/Users/saisr/BuildConnect/BuildConnect.ppk" -r src\\* ec2-user@63.35.203.217:/var/www/html/'
             }
         }
     }
